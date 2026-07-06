@@ -1,0 +1,448 @@
+/* ==UserStyle==
+@name           miruro-gruvbox-sharp
+@namespace      github.com/venittas
+@version        1.0.0
+@description    A gruvbox theme with sharp corners for miruro
+@author         venittas
+==/UserStyle== */
+:root {
+    --surface: #1d2021;
+    /* background */
+    --on-surface: #fbf1c7;
+    /* text & icons */
+    --on-surface-variant: #ebdbb2;
+    /* muted text & icons */
+    --surface-container-lowest: #282828;
+    /* surface on top of background */
+    --surface-container-low: #32302f;
+    /* surface on top of lowest surface */
+    --surface-container: #3c3836;
+    /* surface on top of low surface */
+    --surface-container-high: #504945;
+    /* surface on top of default surface */
+    --surface-container-highest: #665c54;
+    /* surface on top of high surface */
+    --red: #cc241d;
+    --red-bright: #fb4934;
+    --orange: #d65d0e;
+    --orange-bright: #fe8019;
+    --yellow: #d79921;
+    --yellow-bright: #fabd2f;
+    --green: #98971a;
+    --green-bright: #b8bb26;
+    --aqua: #689d6a;
+    --aqua-bright: #8ec07c;
+    --blue: #458588;
+    --blue-bright: #83a598;
+    --pink: #b16286;
+    --pink-bright: #d3869b;
+}
+
+@-moz-document domain("miruro.tv"),
+domain("theanimecommunity.com") {
+    :root {
+        --primary-accent: var(--aqua) !important;
+        --primary-accent-bg: rgb(104 157 106 / .5) !important;
+        --primary-accent-tr: rgb(142 192 124 / .7) !important;
+        --primary-accent-dk-tr: var(--primary-accent-tr) !important;
+        --ongoing: var(--green-bright) !important;
+        --completed: var(--blue-bright) !important;
+        --cancelled: var(--red-bright) !important;
+        --not-yet-aired: var(--yellow-bright) !important;
+        --favourite: var(--pink-bright) !important;
+        --favourite-bg: hsl(343.64, 46.67%, 47.65%) !important;
+        --global-primary-bg: var(--surface) !important;
+        --global-secondary-bg: var(--surface-container) !important;
+        --global-div: var(--surface-container-lowest) !important;
+        --global-div-tr: var(--surface-container-lowest) !important;
+        --global-div-tr-2: var(--surface-container-low) !important;
+        --global-text: var(--on-surface) !important;
+        --global-text-muted: var(--on-surface-variant) !important;
+        --global-text-muted-strong: var(--on-surface-variant) !important;
+        --global-border-color: var(--surface-container-low) !important;
+        --global-card-bg: var(--surface-container-low) !important;
+        --global-card-title-bg: var(--surface-container) !important;
+        --global-primary-skeleton: var(--surface-container-low) !important;
+        --global-secondary-skeleton: var(--surface-container) !important;
+        --global-button-text: var(--global-text) !important;
+    }
+
+    * {
+        border-radius: 0px !important;
+        border: 0 !important;
+        filter: none !important;
+        -webkit-filter: none !important;
+    }
+
+    body {
+        background-color: var(--surface);
+    }
+
+    button:hover {
+        color: var(--global-text) !important;
+    }
+
+    button[class*="tabActive"],
+    button[class*="isSelected"],
+    a[class*="navItem"],
+    button[class*="commentButton"] {
+        color: var(--global-text) !important;
+    }
+
+    div[class*="navbar"],
+    div[class*="paginationWrapper"] div[class*="navigationButton"],
+    div[class*="paginationWrapper"] div[class*="home-carousel"] {
+        background-color: var(--surface-container-lowest);
+    }
+
+    div[class*="navbar"] div[class*="inputContainer"] {
+        background-color: var(--surface-container-low);
+    }
+
+    div[class*="navbar"] div[class*="inputContainer"] button {
+        color: var(--red);
+    }
+
+    div[class*="navbar"] div[class*="inputContainer"] button:hover {
+        color: var(--red-bright);
+    }
+
+    div[class*="navbar"] div[class*="actionButtons"] button {
+        background-color: var(--surface-container-low);
+        color: var(--green);
+    }
+
+    div[class*="navbar"] div[class*="actionButtons"] button:hover {
+        background-color: var(--surface-container);
+        color: var(--green-bright) !important;
+    }
+
+    div[class*="navbar"] div[class*="rightContent"] button {
+        background-color: var(--surface-container-low);
+        color: var(--yellow);
+    }
+
+    div[class*="navbar"] div[class*="rightContent"] button:hover {
+        background-color: var(--surface-container);
+        color: var(--yellow-bright) !important;
+    }
+
+    div[class*="navbar"] div[class*="inputContainer"] {
+        background-color: var(--surface-container-low);
+    }
+
+    div[class*="drawer"] a[class*="navItem"]:hover {
+        background-color: var(--primary-accent-bg);
+    }
+
+    div[class*="drawer"] a[class*="active"]:hover {
+        background-color: var(--primary-accent-dk-tr);
+    }
+
+    div[class*="drawer"] div[class*="themeRow"] {
+        display: none;
+    }
+
+    div[class*="drawer"] div[class*="infoLinks"] a {
+        color: var(--green-bright);
+    }
+
+    span[class*="versionBadge"] {
+        color: var(--aqua-bright);
+    }
+
+    div[class*="menuRow"] a[class*="profileButton"] svg {
+        color: var(--blue);
+    }
+
+    div[class*="menuRow"] a[class*="profileButton"] span {
+        color: var(--global-text);
+    }
+
+    div[class*="menuRow"] a[class*="profileButton"]:hover {
+        background-color: var(--primary-accent-bg);
+    }
+
+    div[class*="nextAiringBadge"] {
+        background-color: var(--surface-container-low);
+    }
+
+    div[class*="nextAiringBadge"] svg {
+        color: var(--yellow);
+        margin-bottom: .1rem;
+    }
+
+    div[class*="paginationWrapper"] div {
+        background-color: var(--surface-container-low);
+        backdrop-filter: none;
+    }
+
+    div[class*="paginationWrapper"] div[class*="navigationButton"] {
+        color: var(--green);
+        transition: .4s ease-in-out;
+    }
+
+    div[class*="paginationWrapper"] div[class*="navigationButton"]:hover {
+        background-color: var(--surface-container);
+    }
+
+    div[class*="paginationWrapper"] div[class*="home-carousel"] span {
+        font-size: 1rem;
+    }
+
+    div[class*="ActionButtons"] a {
+        background-color: var(--surface-container-low);
+    }
+
+    div[class*="ActionButtons"] a:hover {
+        background-color: var(--surface-container);
+    }
+
+    div[class*="ActionButtons"] a:first-child svg {
+        color: var(--blue);
+    }
+
+    div[class*="ActionButtons"] a:last-child svg {
+        color: var(--aqua);
+    }
+
+    div[class*="slider"],
+    div[class*="noticeRow"],
+    div[class*="titleBlock"] span {
+        display: none;
+    }
+
+    .swiper-wrapper div:last-child:has(> a) a {
+        color: var(--blue);
+        font-weight: 500;
+        font-size: 1.5rem;
+        background-color: var(--surface-container-low);
+    }
+
+    div[class*="cardInfoTop"] button {
+        visibility: hidden;
+    }
+
+    div[class*="verticalCardShell"] {
+        background-color: transparent
+    }
+
+    div[class*="verticalCardShell"]:hover button {
+        visibility: visible;
+    }
+
+    div[class*="verticalCardShell"]:hover button svg {
+        background-color: var(--on-surface-variant) !important;
+        color: var(--red-bright) !important;
+    }
+
+    div[class*="cardInfoBottom"] span {
+        background-color: var(--surface-container);
+    }
+
+    div[class*="cardProgressBar"] {
+        height: .35rem;
+    }
+
+    div[class*="fullProgressBar"] {
+        background-color: var(--surface-container-highest);
+    }
+
+    div[class*="playbackProgressBar"] {
+        background-color: var(--red-bright);
+    }
+
+    div[class*="cardTitleBelow"] {
+        background-color: transparent;
+    }
+
+    div[class*="tabsAndPaginationContainer"] button[class*="tab"]:hover {
+        background-color: var(--primary-accent-bg);
+    }
+
+    div[class*="tabsAndPaginationContainer"] button[class*="tabActive"]:hover {
+        background-color: var(--primary-accent-tr);
+    }
+
+    div[class*="tabsAndPaginationContainer"] div[class*="compactWrapper"] button {
+        color: var(--green);
+    }
+
+    div[class*="tabsAndPaginationContainer"] div[class*="compactWrapper"] button:hover {
+        background-color: var(--surface-container-low);
+        color: var(--green-bright) !important;
+    }
+
+    div[class*="tabsAndPaginationContainer"] div[class*="compactWrapper"] button:disabled:hover {
+        background-color: var(--surface-container-lowest);
+        color: var(--green) !important;
+    }
+
+    a[id*="card"] svg,
+    div[class*="coverImageContainer"] a[href*="info/"] svg {
+        color: var(--green-bright);
+    }
+
+    *[class*="viewMore"] {
+        color: var(--blue);
+    }
+
+    *[class*="viewMore"]:hover {
+        color: var(--blue-bright) !important
+    }
+
+    div[class*="themeButtonWrapper"] {
+        display: none;
+    }
+
+    div[class*="socialIconsWrapper"] a[href*="reddit"] {
+        color: var(--red);
+    }
+
+    div[class*="socialIconsWrapper"] a[href*="x"] {
+        color: var(--global-text);
+    }
+
+    div[class*="socialIconsWrapper"] a[href*="discord"] {
+        color: var(--blue);
+    }
+
+    a[class*="editProfileLink"] {
+        color: var(--blue);
+    }
+
+    a[class*="editProfileLink"]:hover {
+        background-color: var(--surface-container);
+        color: var(--blue-bright);
+    }
+
+    button[class*="editProfileLink"] {
+        color: var(--green);
+    }
+
+    button[class*="editProfileLink"]:hover {
+        background-color: var(--surface-container);
+        color: var(--green-bright) !important;
+    }
+
+    div[class*="statusButtonContainer"] div[class*="customListActions"] button:first-child {
+        color: var(--blue);
+    }
+
+    div[class*="statusButtonContainer"] div[class*="customListActions"] button:first-child:hover {
+        color: var(--blue-bright) !important;
+        background-color: var(--surface-container);
+    }
+
+    div[class*="statusButtonContainer"] div[class*="customListActions"] button:last-child {
+        color: var(--red);
+    }
+
+    div[class*="statusButtonContainer"] div[class*="customListActions"] button:last-child:hover {
+        color: var(--red-bright) !important;
+        background-color: var(--surface-container);
+    }
+
+    div[class*="statusButtonContainer"] form button {
+        color: var(--green) !important
+    }
+
+    div[class*="statusButtonContainer"] form button:hover {
+        color: var(--green-bright) !important;
+        background-color: var(--surface-container-low);
+    }
+
+    button[class*="toggleButton"] span[class*="track"] {
+        background-color: var(--surface-container-low);
+    }
+
+
+    button[class*="toggleButton"] span[class*="trackChecked"] {
+        background-color: var(--primary-accent-bg);
+    }
+
+    button[class*="toggleButton"] span[class*="thumbChecked"] {
+        background-color: var(--global-text);
+    }
+
+    div[class*="genreContainer"] a {
+        background-color: var(--blue);
+    }
+
+
+    div[class*="dropdownGroup"] button[class*="trigger"] svg {
+        color: var(--blue);
+    }
+
+    div[class*="tagRowGroup"] div:last-child button:first-child svg {
+        color: var(--orange);
+    }
+
+
+    div[class*="tagRowGroup"] div:last-child button:nth-child(2) svg {
+        color: var(--green);
+    }
+
+    div[class*="tagRowGroup"] div:last-child button:last-child svg {
+        color: var(--aqua);
+    }
+
+    .mantine-Popover-dropdown {
+        left: 1134px !important;
+        background-color: var(--surface-container) !important;
+    }
+
+    div[role="option"] {
+        background-color: transparent !important;
+    }
+
+    div[role="option"]:hover {
+        background-color: var(--primary-accent-bg) !important;
+    }
+
+    .m_8fb7ebe7 {
+        background-color: var(--surface-container-low) !important;
+        width: 78px !important;
+    }
+
+    .m_8fb7ebe7:focus,
+    .m_8fb7ebe7:focus-within {
+        border-color: var(--primary-accent-bg) !important;
+    }
+
+    .mantine-Group-root a {
+        color: var(--primary-accent) !important;
+    }
+
+    .mantine-Group-root a:hover {
+        text-decoration: none;
+        color: var(--aqua-bright) !important;
+    }
+
+    .m_77c9d27d {
+        color: var(--global-text)
+    }
+
+    .m_77c9d27d:hover:where(:not([data-loading], :disabled, [data-disabled])) {
+        background-color: var(--primary-accent-bg) !important;
+    }
+
+    .postBody .m_77c9d27d:hover,
+    .threadViewMoreRow .m_77c9d27d:hover {
+        color: #cc241d;
+        background-color: rgba(134, 142, 150, .2) !important;
+    }
+
+    a[class*="siteLink"] {
+        text-decoration: none;
+    }
+
+    div[class*="imageColumn"] a:hover {
+        color: var(--global-text) !important;
+    }
+
+    div[class*="treeLine"],
+    div[class*="treeColumn"] {
+        color: var(--on-surface-variant) !important;
+    }
+}
