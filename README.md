@@ -19,6 +19,13 @@ Themes may be rounded, preserving the shape of the original theme or sharp, any 
     <a href="https://github.com/venittas/gruvbox-userstyle-collection/raw/refs/heads/main/sites/facebook/facebook-sharp.user.css"><img alt="Facebook Sharp Theme" src="https://img.shields.io/badge/Sharp-cc241d"/></a>
     </div>
     </li>
+    <li>
+    <div style="display:flex;align-content:center;gap:5px;">
+    <a href="https://www.youtube.com">YouTube</a>
+    <a href="https://github.com/venittas/gruvbox-userstyle-collection/raw/refs/heads/main/sites/youtube/youtube.user.css"><img alt="YouTube Rounded Theme" src="https://img.shields.io/badge/Rounded-689d6a"/></a>
+    <a href="https://github.com/venittas/gruvbox-userstyle-collection/raw/refs/heads/main/sites/youtube/youtube-sharp.user.css"><img alt="YouTube Sharp Theme" src="https://img.shields.io/badge/Sharp-cc241d"/></a>
+    </div>
+    </li>
 </ul>
 
 ## Preview

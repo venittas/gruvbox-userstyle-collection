@@ -1,0 +1,370 @@
+/* ==UserStyle==
+@name           youtube-gruvbox
+@namespace      github.com/venittas
+@version        1.0.0
+@description    A gruvbox theme for youtube
+@author         venittas
+==/UserStyle== */
+@-moz-document domain("youtube.com") {
+    :root {
+        --surface: #1d2021;
+        /* background */
+        --on-surface: #fbf1c7;
+        /* text & icons */
+        --on-surface-variant: #ebdbb2;
+        /* muted text & icons */
+        --surface-container-lowest: #282828;
+        /* surface on top of background */
+        --surface-container-low: #32302f;
+        /* surface on top of lowest surface */
+        --surface-container: #3c3836;
+        /* surface on top of low surface */
+        --surface-container-high: #504945;
+        /* surface on top of default surface */
+        --surface-container-highest: #665c54;
+        /* surface on top of high surface */
+        --red: #cc241d;
+        --red-bright: #fb4934;
+        --orange: #d65d0e;
+        --orange-bright: #fe8019;
+        --yellow: #d79921;
+        --yellow-bright: #fabd2f;
+        --green: #98971a;
+        --green-bright: #b8bb26;
+        --aqua: #689d6a;
+        --aqua-bright: #8ec07c;
+        --blue: #458588;
+        --blue-bright: #83a598;
+        --pink: #b16286;
+        --pink-bright: #d3869b;
+
+        --t1405e70a39276293: var(--on-surface);
+        --tffc2fd3a644f6275: var(--on-surface);
+        --t4a6da19e16bf221a: var(--on-surface-variant);
+        --tf3fc855af2285f5f: var(--surface-container-low);
+        --t3e41d7b17b187f69: var(--surface);
+        --t2d807bb79e75606d: var(--blue);
+    }
+
+    .ytSearchboxComponentInputBoxDark {
+        border-color: var(--surface-container);
+        background-color: var(--surface-container-low);
+        color: var(--on-surface);
+        border-right: 0px;
+    }
+
+    .ytSearchboxComponentInputBoxDark:focus-within {
+        border-color: var(--surface-container-high) !important;
+    }
+
+    .ytSearchboxComponentSearchButtonDark {
+        border-color: var(--surface-container);
+        background-color: var(--surface-container);
+        color: var(--green);
+    }
+
+    .ytSearchboxComponentSearchButtonDark:hover {
+        background-color: var(--surface-container-high);
+        color: var(--green-bright);
+    }
+
+    .ytSearchboxComponentClearButton svg path {
+        fill: var(--red-bright);
+    }
+
+    #voice-search-button yt-button-shape,
+    ytd-notification-topbar-button-renderer,
+    #masthead #buttons ytd-button-renderer button {
+        background-color: var(--surface-container) !important;
+    }
+
+    #voice-search-button yt-button-shape:hover button,
+    ytd-notification-topbar-button-renderer:hover,
+    #masthead #buttons ytd-button-renderer button:hover {
+        background-color: var(--surface-container-high) !important;
+    }
+
+    #voice-search-button yt-button-shape {
+        border-radius: 100% !important;
+    }
+
+    #voice-search-button .ytSpecButtonShapeNextHost {
+        color: var(--aqua) !important;
+    }
+
+    ytd-notification-topbar-button-renderer {
+        border-radius: 100%;
+    }
+
+    ytd-notification-topbar-button-renderer .ytSpecIconBadgeShapeIcon {
+        color: var(--yellow) !important;
+    }
+
+    ytd-notification-topbar-button-renderer .ytSpecIconBadgeShapeBadge {
+        border: 0px !important;
+        background-color: var(--red) !important;
+        color: var(--on-surface) !important;
+    }
+
+    #buttons ytd-button-renderer yt-button-shape {
+        width: 40px;
+    }
+
+    #buttons ytd-button-renderer button div[class*="TextContent"] {
+        display: none;
+    }
+
+    #buttons ytd-button-renderer button div[class*="Icon"] {
+        margin: 0;
+        color: var(--aqua);
+    }
+
+    #left-arrow-button button,
+    #right-arrow-button button {
+        color: var(--green);
+    }
+
+    .ytChipShapeActive {
+        background-color: var(--aqua);
+        color: var(--on-surface);
+    }
+
+    #contents ytd-rich-section-renderer {
+        display: none;
+    }
+
+    #content .ytChipsShelfViewModelChipsScrollContainer .ytChipShapeActive {
+        background-color: var(--blue);
+        color: var(--on-surface);
+    }
+
+    yt-content-metadata-view-model div:first-child svg {
+        color: var(--pink);
+    }
+
+    #dismissible {
+        border-bottom-color: var(--surface-container-lowest);
+    }
+
+    #dismissible .expand-collapse-button button:hover {
+        background-color: var(--blue);
+    }
+
+    #sections ytd-guide-section-renderer:nth-child(1) ytd-guide-entry-renderer:last-child {
+        display: none;
+    }
+
+    #sections ytd-guide-section-renderer #endpoint:hover {
+        background-color: var(--surface-container-low);
+    }
+
+    #sections ytd-guide-section-renderer:nth-child(1) ytd-guide-entry-renderer[active],
+    #sections ytd-guide-section-renderer:nth-child(1) ytd-guide-entry-renderer[active]:hover #endpoint {
+        background-color: var(--aqua);
+    }
+
+    #sections ytd-guide-section-renderer:nth-child(1) ytd-guide-entry-renderer:last-child {
+        display: none;
+    }
+
+    #sections ytd-guide-section-renderer:nth-child(2) #header tp-yt-paper-item * {
+        color: var(--pink) !important;
+    }
+
+    #sections ytd-guide-section-renderer:nth-child(2) #header ytd-guide-entry-renderer[active] tp-yt-paper-item * {
+        color: var(--on-surface) !important;
+    }
+
+    #sections ytd-guide-section-renderer:nth-child(2) ytd-guide-entry-renderer[active],
+    #sections ytd-guide-section-renderer:nth-child(2) ytd-guide-entry-renderer[active]:hover #endpoint {
+        background-color: var(--pink) !important;
+    }
+
+    #sections ytd-guide-section-renderer:nth-child(3) #header tp-yt-paper-item * {
+        color: var(--yellow-bright) !important;
+    }
+
+    #sections ytd-guide-section-renderer:nth-child(3) #header ytd-guide-entry-renderer[active] tp-yt-paper-item * {
+        color: var(--on-surface) !important;
+    }
+
+
+    #sections ytd-guide-section-renderer:nth-child(3) ytd-guide-entry-renderer[active],
+    #sections ytd-guide-section-renderer:nth-child(3) ytd-guide-entry-renderer[active]:hover #endpoint {
+        background-color: var(--yellow) !important;
+    }
+
+    #sections ytd-guide-section-renderer:nth-child(4) {
+        display: none;
+    }
+
+    #sections ytd-guide-section-renderer:nth-child(5) h3 * {
+        color: var(--red-bright) !important;
+    }
+
+    #sections ytd-guide-section-renderer:nth-child(5) #header ytd-guide-entry-renderer[active] tp-yt-paper-item * {
+        color: var(--on-surface) !important;
+    }
+
+
+    #sections ytd-guide-section-renderer:nth-child(5) ytd-guide-entry-renderer[active],
+    #sections ytd-guide-section-renderer:nth-child(5) ytd-guide-entry-renderer[active]:hover #endpoint {
+        background-color: var(--red) !important;
+    }
+
+
+    #copyright div {
+        color: var(--on-surface-variant);
+    }
+
+    yt-subscribe-button-view-model .ytSubscribeButtonViewModelContainer button {
+        background-color: var(--red) !important;
+        color: var(--on-surface) !important;
+    }
+
+    yt-subscribe-button-view-model .ytSubscribeButtonViewModelContainer button div:first-child svg path {
+        fill: var(--on-surface);
+    }
+
+    yt-subscribe-button-view-model .ytSubscribeButtonViewModelContainer button[aria-label*="notification"] {
+        background-color: var(--pink) !important;
+    }
+
+    .ytThumbnailOverlayProgressBarHostWatchedProgressBarSegment {
+        background: linear-gradient(90deg, var(--red) 80%, var(--pink)) !important;
+    }
+
+    ytd-recognition-shelf-renderer #action-button button {
+        background-color: var(--aqua);
+        color: var(--on-surface);
+    }
+
+    ytd-item-section-renderer #subscribe button[aria-label*="Unsubscribe"] {
+        background-color: var(--pink) !important;
+    }
+
+    ytd-item-section-renderer #subscribe button[aria-label*="Subscribe"] {
+        background-color: var(--red);
+    }
+
+    .ytBadgeShapeThumbnailDefault {
+        color: var(--on-surface);
+        background-color: var(--surface-container-lowest);
+        backdrop-filter: none;
+        filter: none;
+    }
+
+    .ytp-large-play-button svg path:first-child {
+        fill: var(--surface-container-lowest) !important;
+    }
+
+    .ytp-large-play-button svg path:last-child {
+        fill: var(--on-surface) !important;
+    }
+
+    .ytd-player:hover .ytp-large-play-button svg path:first-child {
+        fill: var(--red) !important;
+    }
+
+    .ytp-large-play-button svg path:last-child {
+        fill: var(--on-surface) !important;
+    }
+
+    .ytp-chrome-top-buttons button,
+    .ytp-chrome-top-buttons button svg path,
+    .ytp-chrome-controls button,
+    .ytp-time-contents span,
+    .ytp-chrome-controls button svg path {
+        color: var(--on-surface) !important;
+        fill: var(--on-surface) !important;
+    }
+
+    .ytp-chrome-controls .ytp-autonav-toggle-button[aria-checked=false]:after {
+        background-color: var(--on-surface) !important;
+    }
+
+    .ytp-chrome-controls .ytp-autonav-toggle-button[aria-checked=true]:after {
+        background-color: var(--surface-container-lowest) !important;
+    }
+
+    #channel-name badge-shape svg {
+        fill: var(--blue);
+    }
+
+    #above-the-fold button[aria-label*="Unsubscribe"] {
+        background-color: var(--pink);
+        color: var(--on-surface);
+    }
+
+    #above-the-fold button[aria-label*="Subscribe"] {
+        background-color: var(--red);
+        color: var(--on-surface);
+    }
+
+    segmented-like-dislike-button-view-model like-button-view-model path {
+        fill: var(--on-surface);
+    }
+
+    #above-the-fold #actions #flexible-item-buttons yt-button-view-model:first-child {
+        display: none;
+    }
+
+    ytd-watch-info-text #info-container>yt-formatted-string a {
+        color: var(--blue);
+    }
+
+    yt-attributed-string span {
+        color: var(--on-surface) !important;
+    }
+
+    yt-attributed-string span a {
+        color: var(--blue) !important;
+    }
+
+    yt-attributed-string span[style*="background-color"] {
+        background-color: var(--blue) !important;
+    }
+
+    yt-attributed-string span[style*="background-color"] a {
+        color: var(--on-surface) !important;
+    }
+
+    #video-summary {
+        display: none;
+    }
+
+    yt-video-description-youchat-section-view-model {
+        display: none !important;
+    }
+
+    #social-links ytd-button-renderer,
+    #social-links button-view-model {
+        background-color: var(--surface-container-low);
+    }
+
+    #social-links ytd-button-renderer:hover,
+    #social-links button-view-model:hover {
+        background-color: var(--surface-container);
+    }
+
+    .ytSubThreadConnection,
+    .ytSubThreadContinuation,
+    .threadline .continuation {
+        border-bottom-color: var(--surface-container) !important;
+    }
+
+    .ytSubThreadHovered .ytSubThreadConnection {
+        border-bottom-color: var(--surface-container-highest) !important;
+    }
+
+    .ytSubThreadHovered .ytSubThreadContinuation,
+    ytd-comment-view-model[hovered] .threadline .continuation,
+    .ytSubThreadHovered .ytSubThreadConnection,
+    ytd-comment-view-model[hovered] .continuation.ytd-comment-view-model {
+        border-left-color: var(--surface-container-highest) !important;
+    }
+
+    .ytSuggestionComponentSuggestion span {
+        color: var(--on-surface);
+    }
+}
