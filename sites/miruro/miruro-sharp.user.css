@@ -522,4 +522,8 @@ domain("theanimecommunity.com") {
     #episodes-list-container button:hover * {
         transform: translateX(8%);
     }
+
+    div[class*="timeSlot"] a[class*="watchNow"] div:hover {
+        outline: none;
+    }
 }
