@@ -141,15 +141,15 @@
         border-radius: 100%;
     }
 
-    #buttons ytd-button-renderer yt-button-shape {
+    #masthead #buttons ytd-button-renderer yt-button-shape {
         width: 40px;
     }
 
-    #buttons ytd-button-renderer button div[class*="TextContent"] {
+    #masthead #buttons ytd-button-renderer button div[class*="TextContent"] {
         display: none;
     }
 
-    #buttons ytd-button-renderer button div[class*="Icon"] {
+    #masthead #buttons ytd-button-renderer button div[class*="Icon"] {
         margin: 0;
         color: var(--aqua);
     }
