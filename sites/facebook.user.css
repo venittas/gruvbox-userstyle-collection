@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           facebook-gruvbox
 @namespace      github.com/venittas
-@version        1.0.0
+@version        1.0.1
 @description    A gruvbox theme for facebook
 @author         venittas
 
@@ -10,348 +10,358 @@
 ==/UserStyle== */
 
 @-moz-document domain("facebook.com") {
-    if sharpCorners {
-        * {
-            border-radius: 0px !important;
-        }
+  if sharpCorners {
+    * {
+      border-radius: 0px !important;
     }
 
-    :root,
-    .__fb-dark-mode {
-        --surface: #1d2021;
-        /* background */
-        --on-surface: #fbf1c7;
-        /* text & icons */
-        --on-surface-variant: #ebdbb2;
-        /* muted text & icons */
-        --surface-container-lowest: #282828;
-        /* surface on top of background */
-        --surface-container-low: #32302f;
-        /* surface on top of lowest surface */
-        --surface-container: #3c3836;
-        /* surface on top of low surface */
-        --surface-container-high: #504945;
-        /* surface on top of default surface */
-        --surface-container-highest: #665c54;
-        /* surface on top of high surface */
-
-        --red: #cc241d;
-        --red-bright: #fb4934;
-        --orange: #d65d0e;
-        --orange-bright: #fe8019;
-        --yellow: #d79921;
-        --yellow-bright: #fabd2f;
-        --green: #98971a;
-        --green-bright: #b8bb26;
-        --aqua: #689d6a;
-        --aqua-bright: #8ec07c;
-        --blue: #458588;
-        --blue-bright: #83a598;
-        --pink: #b16286;
-        --pink-bright: #d3869b;
-
-        --mwp-header-background-color: var(--surface) !important;
-        --mwp-header-button-color: var(--on-surface) !important;
-        --mwp-header-text-color: var(--on-surface) !important;
-        --messenger-card-background: var(--surface-container-lowest) !important;
-        --chat-replied-message-background-color: var(--surface-container-low) !important;
-        --chat-incoming-message-bubble-background-color: var(--blue-bright) !important;
-        --chat-outgoing-message-bubble-background-color: var(--blue) !important;
-        --chat-message-text-color: var(--on-surface) !important;
-        --chat-incoming-message-text-color: var(--surface) !important;
-        --chat-composer-background-color: var(--surface-container) !important;
-        --chat-composer-button-color: var(--aqua) !important;
-        --chat-composer-caret-color: var(--on-surface) !important;
-        --chat-composer-input-background-color: var(--surface-container-low) !important;
-        --chat-scrollbar-thumb-color: var(--aqua-bright) !important;
-        --always-white: var(--on-surface);
-        --action-corner-radius: 6px;
-        --action-tile-radius: 16px;
-        --attachment-footer-background: rgba(255, 255, 255, .1);
-        --background-deemphasized: rgba(255, 255, 255, .1);
-        --badge-corner-radius: 255px;
-        --base-cherry: var(--red);
-        --base-grape: var(--pink);
-        --base-lemon: var(--yellow-bright);
-        --base-lime: var(--yellow);
-        --base-pink: var(--pink-bright);
-        --base-blue: var(--blue);
-        --base-teal: var(--blue-bright);
-        --blue-link: var(--blue);
-        --border-ui-emphasis: rgba(255, 255, 255, .05);
-        --bottom-sheet-corner-radius: 20px;
-        --button-corner-radius: 8px;
-        --button-group-corner-radius: 0px;
-        --button-large-corner-radius: 8px;
-        --button-small-corner-radius: 8px;
-        --card-background-flat: var(--surface);
-        --card-background: var(--surface-container-lowest);
-        --card-corner-radius: 12px;
-        --card-large-corner-radius: 16px;
-        --card-small-corner-radius: 12px;
-        --card-square-corner-radius: 0px;
-        --carousel-corner-radius: 0px;
-        --cell-corner-radius: 0px;
-        --checkbox-corner-radius: 4px;
-        --chip-corner-radius: 255px;
-        --chip-group-corner-radius: 0px;
-        --comment-background: var(--surface-container-low);
-        --comment-bubble: 16px;
-        --comment-threading-lines: var(--surface-container-high);
-        --cursor: var(--aqua-bright);
-        --cursor-on-color: var(--on-surface);
-        --cursor-on-media: var(--on-surface);
-        --dialog-corner-radius: 12px;
-        --disabled-button-background: rgba(255, 255, 255, .1);
-        --disabled-icon: var(--surface-container-low);
-        --disabled-text: var(--surface-container-low);
-        --divider: var(--surface-container-low);
-        --divider-on-color: var(--surface-container);
-        --entity-header-background-corner-radius: 0px;
-        --event-date: var(--red);
-        --fb-logo: var(--blue);
-        --fb-wordmark: var(--on-surface);
-        --fds-animation-enter-exit-in: cubic-bezier(.14, 1, .34, 1);
-        --fds-animation-enter-exit-out: cubic-bezier(.45, .1, .2, 1);
-        --fds-animation-expand-collapse-in: cubic-bezier(.17, .17, 0, 1);
-        --fds-animation-expand-collapse-out: cubic-bezier(.17, .17, 0, 1);
-        --fds-animation-fade-in: cubic-bezier(0, 0, 1, 1);
-        --fds-animation-fade-out: cubic-bezier(0, 0, 1, 1);
-        --fds-animation-glimmer-in: cubic-bezier(.5, 0, .5, 1);
-        --fds-animation-glimmer-out: cubic-bezier(.5, 0, .5, 1);
-        --fds-animation-linear-in: cubic-bezier(0, 0, 1, 1);
-        --fds-animation-linear-out: cubic-bezier(0, 0, 1, 1);
-        --fds-animation-move-in: cubic-bezier(.17, .17, 0, 1);
-        --fds-animation-move-out: cubic-bezier(.17, .17, 0, 1);
-        --fds-animation-passive-move-in: cubic-bezier(.5, 0, .1, 1);
-        --fds-animation-passive-move-out: cubic-bezier(.5, 0, .1, 1);
-        --fds-animation-quick-move-in: cubic-bezier(.1, .9, .2, 1);
-        --fds-animation-quick-move-out: cubic-bezier(.1, .9, .2, 1);
-        --fds-animation-swap-shuffle-in: cubic-bezier(.14, 1, .34, 1);
-        --fds-animation-swap-shuffle-out: cubic-bezier(.45, .1, .2, 1);
-        --fds-duration-extra-extra-short-in: .1s;
-        --fds-duration-extra-extra-short-out: .1s;
-        --fds-duration-extra-long-in: 1s;
-        --fds-duration-extra-long-out: 1s;
-        --fds-duration-extra-short-in: .2s;
-        --fds-duration-extra-short-out: .15s;
-        --fds-duration-long-in: .5s;
-        --fds-duration-long-out: .35s;
-        --fds-duration-medium-in: .4s;
-        --fds-duration-medium-out: .35s;
-        --fds-duration-none: 0ms;
-        --fds-duration-short-in: .28s;
-        --fds-duration-short-out: .2s;
-        --fds-fast: .2s;
-        --fds-slow: .4s;
-        --filter-group-corner-radius: 0px;
-        --glimmer-base-opaque: var(--on-surface);
-        --glimmer-corner-radius: 0px;
-        --glimmer-high-contrast-base-opaque: var(--on-surface);
-        --glimmer-large-corner-radius: 12px;
-        --glimmer-medium-corner-radius: 8px;
-        --glimmer-opacity-high-contrast-max: .48;
-        --glimmer-opacity-high-contrast-min: .1;
-        --glimmer-opacity-max: .58;
-        --glimmer-opacity-min: .15;
-        --glimmer-small-corner-radius: 6px;
-        --glimmer-xlarge-corner-radius: 16px;
-        --glimmer-xsmall-corner-radius: 4px;
-        --handle-corner-radius: 255px;
-        --hosted-view-selected-state: rgba(29, 133, 252, .1);
-        --hscroll-corner-radius: 0px;
-        --hscroll-utility-corner-radius: 0px;
-        --icon-action-corner-radius: 255px;
-        --infochip-large-radius: 8px;
-        --infochip-medium-radius: 4px;
-        --infochip-small-radius: 4px;
-        --input-bar-corner-radius: 255px;
-        --input-border-width: 1px;
-        --input-corner-radius: 12px;
-        --input-field-expanded-corner-radius: 20px;
-        --input-field-round-corner-radius: 255px;
-        --last-active-state-background: var(--surface-container-lowest);
-        --last-active-state-text: var(--pink);
-        --link-on-media: var(--on-surface);
-        --list-cell-corner-radius: 8px;
-        --list-cell-min-height: 44px;
-        --listcell-inset-radius: 16px;
-        --media-corner-radius: 12px;
-        --media-hovered: rgba(255, 255, 255, .15);
-        --media-inner-border: rgba(255, 255, 255, .05);
-        --media-large-corner-radius: 16px;
-        --media-pressed: rgba(255, 255, 255, .3);
-        --media-small-corner-radius: 12px;
-        --media-square-corner-radius: 0px;
-        --nav-bar-background: var(--surface-container-lowest);
-        --negative: var(--red-bright);
-        --negative-background: rgba(185, 24, 40, .2);
-        --new-notification-background: rgba(45, 136, 255, .1);
-        --non-media-pressed: rgba(255, 255, 255, .2);
-        --non-media-pressed-on-dark: rgba(255, 255, 255, .3);
-        --notification-badge: var(--red);
-        --overlay-on-media: rgba(0, 0, 0, .8);
-        --pagination-dots-corner-radius: 255px;
-        --persistent-cta-corner-radius: 0px;
-        --placeholder-icon: var(--on-surface-variant);
-        --placeholder-image: var(--on-surface-variant);
-        --placeholder-text: var(--on-surface-variant);
-        --placeholder-text-on-media: var(--on-surface);
-        --popover-background: var(--surface-container);
-        --popover-corner-radius: 16px;
-        --positive: var(--aqua);
-        --positive-deemphasized: var(--surface-container-low);
-        --pressed-state-large-corner-radius: 12px;
-        --pressed-state-medium-corner-radius: 8px;
-        --pressed-state-rounded-corner-radius: 255px;
-        --pressed-state-small-corner-radius: 6px;
-        --pressed-state-square-corner-radius: 0px;
-        --pressed-state-xlarge-corner-radius: 16px;
-        --pressed-state-xsmall-corner-radius: 4px;
-        --primary-button-background: var(--aqua);
-        --primary-button-background-on-color: hsl(45.56, 67.50%, 84.31%);
-        --primary-button-background-on-media: hsl(45.56, 67.50%, 84.31%);
-        --primary-button-icon: var(--on-surface);
-        --primary-button-icon-on-color: var(--surface);
-        --primary-button-icon-on-media: var(--surface);
-        --primary-button-text: var(--on-surface);
-        --primary-button-text-on-media: var(--surface);
-        --primary-deemphasized-button-background: hsla(59.52, 70.79%, 34.90%, .5);
-        --primary-deemphasized-button-icon: var(--on-surface-variant);
-        --primary-deemphasized-button-text: var(--on-surface-variant);
-        --primary-icon: var(--on-surface);
-        --primary-icon-on-media: var(--on-surface);
-        --primary-text: var(--on-surface);
-        --primary-text-on-color: var(--on-surface);
-        --primary-text-on-media: var(--on-surface);
-        --profile-photo-actor-corner-radius: 255px;
-        --profile-photo-non-actor-large-corner-radius: 12px;
-        --profile-photo-non-actor-medium-corner-radius: 8px;
-        --profile-photo-non-actor-small-corner-radius: 6px;
-        --profile-photo-non-actor-xlarge-corner-radius: 16px;
-        --profile-photo-non-actor-xsmall-corner-radius: 4px;
-        --progress-corner-radius: 255px;
-        --progress-ring-blue-background: hsla(182.69, 32.68%, 40.20%, .5);
-        --progress-ring-blue-foreground: var(--blue);
-        --progress-ring-disabled-background: rgba(111, 114, 118, .2);
-        --progress-ring-disabled-foreground: var(--surface-container-low);
-        --progress-ring-neutral-background: rgba(255, 255, 255, .2);
-        --progress-ring-neutral-foreground: var(--on-surface-variant);
-        --progress-ring-on-media-background: rgba(255, 255, 255, .2);
-        --progress-ring-on-media-foreground: var(--on-surface);
-        --radio-border-width: 2px;
-        --radio-checked-icon-size-large: 12px;
-        --radio-checked-icon-size-medium: 12px;
-        --radio-size-large: 24px;
-        --radio-size-medium: 20px;
-        --rating-star-active: var(--yellow-bright);
-        --rating-star-active-on-color: var(--on-surface);
-        --rating-star-active-on-media: var(--on-surface);
-        --reaction-anger: var(--red);
-        --reaction-haha: var(--yellow);
-        --reaction-like: var(--blue);
-        --reaction-love: var(--red-bright);
-        --reaction-sorry: var(--yellow);
-        --reaction-support: var(--yellow);
-        --reaction-wow: var(--yellow);
-        --reshare-radius: 16px;
-        --secondary-button-background: var(--surface-container);
-        --secondary-button-background-floating: var(--surface-container);
-        --secondary-button-background-on-color: var(--surface-container);
-        --secondary-button-background-on-dark: var(--surface-container-low);
-        --secondary-button-background-on-media: var(--surface-container-low);
-        --secondary-button-icon-on-media: var(--on-surface);
-        --secondary-button-pressed: var(--surface-container-lowest);
-        --secondary-button-stroke: rgba(0, 0, 0, 0);
-        --secondary-button-text: var(--on-surface);
-        --secondary-icon: var(--on-surface-variant);
-        --secondary-icon-on-color: var(--on-surface);
-        --secondary-icon-on-media: hvar(--on-surface);
-        --secondary-text: var(--on-surface-variant);
-        --secondary-text-on-color: var(--on-surface-variant);
-        --secondary-text-on-media: var(--on-surface-variant);
-        --selection-control-corner-radius: 4px;
-        --selection-control-large-corner-radius: 255px;
-        --selector-item-round: 255px;
-        --selector-item-square: 8px;
-        --sticky-footer-corner-radius: 0px;
-        --story-seen: var(--surface-container);
-        --story-unseen: var(--blue);
-        --sub-nav-action-corner-radius: 255px;
-        --surface-background: var(--surface);
-        --switch-unchecked-background-color: var(--surface-container);
-        --table-corner-radius: 0px;
-        --text-badge-corner-radius: 4px;
-        --text-badge-padding-horizontal: 6px;
-        --text-badge-padding-vertical: 6px;
-        --text-highlight: hsla(189.56, 88.98%, 24.90%, .6);
-        --text-input-active-text: var(--blue);
-        --text-input-bar-background: rgba(255, 255, 255, .1);
-        --text-input-caption-margin-top: 10px;
-        --text-input-multi-padding-between-text-scrollbar: 20px;
-        --text-input-multi-padding-scrollbar: 16px;
-        --text-input-padding-vertical: 12px;
-        --toast-addon-padding-horizontal: 6px;
-        --toast-addon-padding-vertical: 6px;
-        --toast-container-padding-horizontal: 10px;
-        --toast-container-padding-vertical: 16px;
-        --toast-corner-radius: 8px;
-        --toggle-active-background: var(--aqua);
-        --toggle-active-icon: ;
-        --toggle-active-text: var(--on-surface);
-        --tooltip-background: rgba(0, 0, 0, .8);
-        --tooltip-background-on-media: var(--surface-container-high);
-        --tooltip-corner-radius: 12px;
-        --verticalgrid-corner-radius: 0px;
-        --verticalgrid-inset-corner-radius: 16px;
-        --warning: var(--yellow);
-        --wash: var(--surface);
-        --web-wash: var(--surface);
-        --accent: var(--blue);
-        --filter-primary-icon: invert(75%) sepia(75%) hue-rotate(0deg);
-        --filter-always-white: invert(75%) sepia(75%) hue-rotate(0deg);
-        --switch-active: var(--aqua);
-        --secondary-icon-on-media: var(--on-surface);
-        --primary-deemphasized-button-background: var(--surface-container-high);
-        --focus-ring-blue: var(--blue);
-        --input-label-color-highlighted: var(--blue);
-        --blue-primary: var(--blue);
-        --dataviz-primary-3: var(--blue);
-        --cyan-primary: var(--blue);
-        --dataviz-blue-primary: var(--blue);
-        --text-badge-info-background: var(--blue);
-        --chat-outgoing-message-background-gradient: linear-gradient(var(--pink) calc(100vh - 455px + 48px), var(--blue) calc(100% - 56px), var(--blue)) !important;
+    a g,
+    svg[aria-label*="Your profile"] g {
+      mask: none;
     }
 
-    a[href="/marketplace/create/"] svg {
-        --x-color: var(--on-surface) !important;
+    a g circle,
+    svg[aria-label*="Your profile"] g circle {
+      display: none;
     }
+  }
 
-    div>div>div:has(h2) {
-        background-image: none !important;
-    }
+  :root,
+  .__fb-dark-mode {
+    --surface: #1d2021;
+    /* background */
+    --on-surface: #fbf1c7;
+    /* text & icons */
+    --on-surface-variant: #ebdbb2;
+    /* muted text & icons */
+    --surface-container-lowest: #282828;
+    /* surface on top of background */
+    --surface-container-low: #32302f;
+    /* surface on top of lowest surface */
+    --surface-container: #3c3836;
+    /* surface on top of low surface */
+    --surface-container-high: #504945;
+    /* surface on top of default surface */
+    --surface-container-highest: #665c54;
+    /* surface on top of high surface */
 
-    .x1xmf6yo:last-child span {
-        color: var(--primary-text) !important;
-    }
+    --red: #cc241d;
+    --red-bright: #fb4934;
+    --orange: #d65d0e;
+    --orange-bright: #fe8019;
+    --yellow: #d79921;
+    --yellow-bright: #fabd2f;
+    --green: #98971a;
+    --green-bright: #b8bb26;
+    --aqua: #689d6a;
+    --aqua-bright: #8ec07c;
+    --blue: #458588;
+    --blue-bright: #83a598;
+    --pink: #b16286;
+    --pink-bright: #d3869b;
 
-    .x1xmf6yo:last-child svg {
-        color: var(--primary-text) !important;
-    }
+    --mwp-header-background-color: var(--surface) !important;
+    --mwp-header-button-color: var(--on-surface) !important;
+    --mwp-header-text-color: var(--on-surface) !important;
+    --messenger-card-background: var(--surface-container-lowest) !important;
+    --chat-replied-message-background-color: var(--surface-container-low) !important;
+    --chat-incoming-message-bubble-background-color: var(--blue-bright) !important;
+    --chat-outgoing-message-bubble-background-color: var(--blue) !important;
+    --chat-message-text-color: var(--on-surface) !important;
+    --chat-incoming-message-text-color: var(--surface) !important;
+    --chat-composer-background-color: var(--surface-container) !important;
+    --chat-composer-button-color: var(--aqua) !important;
+    --chat-composer-caret-color: var(--on-surface) !important;
+    --chat-composer-input-background-color: var(--surface-container-low) !important;
+    --chat-scrollbar-thumb-color: var(--aqua-bright) !important;
+    --always-white: var(--on-surface);
+    --action-corner-radius: 6px;
+    --action-tile-radius: 16px;
+    --attachment-footer-background: rgba(255, 255, 255, .1);
+    --background-deemphasized: rgba(255, 255, 255, .1);
+    --badge-corner-radius: 255px;
+    --base-cherry: var(--red);
+    --base-grape: var(--pink);
+    --base-lemon: var(--yellow-bright);
+    --base-lime: var(--yellow);
+    --base-pink: var(--pink-bright);
+    --base-blue: var(--blue);
+    --base-teal: var(--blue-bright);
+    --blue-link: var(--blue);
+    --border-ui-emphasis: rgba(255, 255, 255, .05);
+    --bottom-sheet-corner-radius: 20px;
+    --button-corner-radius: 8px;
+    --button-group-corner-radius: 0px;
+    --button-large-corner-radius: 8px;
+    --button-small-corner-radius: 8px;
+    --card-background-flat: var(--surface);
+    --card-background: var(--surface-container-lowest);
+    --card-corner-radius: 12px;
+    --card-large-corner-radius: 16px;
+    --card-small-corner-radius: 12px;
+    --card-square-corner-radius: 0px;
+    --carousel-corner-radius: 0px;
+    --cell-corner-radius: 0px;
+    --checkbox-corner-radius: 4px;
+    --chip-corner-radius: 255px;
+    --chip-group-corner-radius: 0px;
+    --comment-background: var(--surface-container-low);
+    --comment-bubble: 16px;
+    --comment-threading-lines: var(--surface-container-high);
+    --cursor: var(--aqua-bright);
+    --cursor-on-color: var(--on-surface);
+    --cursor-on-media: var(--on-surface);
+    --dialog-corner-radius: 12px;
+    --disabled-button-background: rgba(255, 255, 255, .1);
+    --disabled-icon: var(--surface-container-low);
+    --disabled-text: var(--surface-container-low);
+    --divider: var(--surface-container-low);
+    --divider-on-color: var(--surface-container);
+    --entity-header-background-corner-radius: 0px;
+    --event-date: var(--red);
+    --fb-logo: var(--blue);
+    --fb-wordmark: var(--on-surface);
+    --fds-animation-enter-exit-in: cubic-bezier(.14, 1, .34, 1);
+    --fds-animation-enter-exit-out: cubic-bezier(.45, .1, .2, 1);
+    --fds-animation-expand-collapse-in: cubic-bezier(.17, .17, 0, 1);
+    --fds-animation-expand-collapse-out: cubic-bezier(.17, .17, 0, 1);
+    --fds-animation-fade-in: cubic-bezier(0, 0, 1, 1);
+    --fds-animation-fade-out: cubic-bezier(0, 0, 1, 1);
+    --fds-animation-glimmer-in: cubic-bezier(.5, 0, .5, 1);
+    --fds-animation-glimmer-out: cubic-bezier(.5, 0, .5, 1);
+    --fds-animation-linear-in: cubic-bezier(0, 0, 1, 1);
+    --fds-animation-linear-out: cubic-bezier(0, 0, 1, 1);
+    --fds-animation-move-in: cubic-bezier(.17, .17, 0, 1);
+    --fds-animation-move-out: cubic-bezier(.17, .17, 0, 1);
+    --fds-animation-passive-move-in: cubic-bezier(.5, 0, .1, 1);
+    --fds-animation-passive-move-out: cubic-bezier(.5, 0, .1, 1);
+    --fds-animation-quick-move-in: cubic-bezier(.1, .9, .2, 1);
+    --fds-animation-quick-move-out: cubic-bezier(.1, .9, .2, 1);
+    --fds-animation-swap-shuffle-in: cubic-bezier(.14, 1, .34, 1);
+    --fds-animation-swap-shuffle-out: cubic-bezier(.45, .1, .2, 1);
+    --fds-duration-extra-extra-short-in: .1s;
+    --fds-duration-extra-extra-short-out: .1s;
+    --fds-duration-extra-long-in: 1s;
+    --fds-duration-extra-long-out: 1s;
+    --fds-duration-extra-short-in: .2s;
+    --fds-duration-extra-short-out: .15s;
+    --fds-duration-long-in: .5s;
+    --fds-duration-long-out: .35s;
+    --fds-duration-medium-in: .4s;
+    --fds-duration-medium-out: .35s;
+    --fds-duration-none: 0ms;
+    --fds-duration-short-in: .28s;
+    --fds-duration-short-out: .2s;
+    --fds-fast: .2s;
+    --fds-slow: .4s;
+    --filter-group-corner-radius: 0px;
+    --glimmer-base-opaque: var(--on-surface);
+    --glimmer-corner-radius: 0px;
+    --glimmer-high-contrast-base-opaque: var(--on-surface);
+    --glimmer-large-corner-radius: 12px;
+    --glimmer-medium-corner-radius: 8px;
+    --glimmer-opacity-high-contrast-max: .48;
+    --glimmer-opacity-high-contrast-min: .1;
+    --glimmer-opacity-max: .58;
+    --glimmer-opacity-min: .15;
+    --glimmer-small-corner-radius: 6px;
+    --glimmer-xlarge-corner-radius: 16px;
+    --glimmer-xsmall-corner-radius: 4px;
+    --handle-corner-radius: 255px;
+    --hosted-view-selected-state: rgba(29, 133, 252, .1);
+    --hscroll-corner-radius: 0px;
+    --hscroll-utility-corner-radius: 0px;
+    --icon-action-corner-radius: 255px;
+    --infochip-large-radius: 8px;
+    --infochip-medium-radius: 4px;
+    --infochip-small-radius: 4px;
+    --input-bar-corner-radius: 255px;
+    --input-border-width: 1px;
+    --input-corner-radius: 12px;
+    --input-field-expanded-corner-radius: 20px;
+    --input-field-round-corner-radius: 255px;
+    --last-active-state-background: var(--surface-container-lowest);
+    --last-active-state-text: var(--pink);
+    --link-on-media: var(--on-surface);
+    --list-cell-corner-radius: 8px;
+    --list-cell-min-height: 44px;
+    --listcell-inset-radius: 16px;
+    --media-corner-radius: 12px;
+    --media-hovered: rgba(255, 255, 255, .15);
+    --media-inner-border: rgba(255, 255, 255, .05);
+    --media-large-corner-radius: 16px;
+    --media-pressed: rgba(255, 255, 255, .3);
+    --media-small-corner-radius: 12px;
+    --media-square-corner-radius: 0px;
+    --nav-bar-background: var(--surface-container-lowest);
+    --negative: var(--red-bright);
+    --negative-background: rgba(185, 24, 40, .2);
+    --new-notification-background: rgba(45, 136, 255, .1);
+    --non-media-pressed: rgba(255, 255, 255, .2);
+    --non-media-pressed-on-dark: rgba(255, 255, 255, .3);
+    --notification-badge: var(--red);
+    --overlay-on-media: rgba(0, 0, 0, .8);
+    --pagination-dots-corner-radius: 255px;
+    --persistent-cta-corner-radius: 0px;
+    --placeholder-icon: var(--on-surface-variant);
+    --placeholder-image: var(--on-surface-variant);
+    --placeholder-text: var(--on-surface-variant);
+    --placeholder-text-on-media: var(--on-surface);
+    --popover-background: var(--surface-container);
+    --popover-corner-radius: 16px;
+    --positive: var(--aqua);
+    --positive-deemphasized: var(--surface-container-low);
+    --pressed-state-large-corner-radius: 12px;
+    --pressed-state-medium-corner-radius: 8px;
+    --pressed-state-rounded-corner-radius: 255px;
+    --pressed-state-small-corner-radius: 6px;
+    --pressed-state-square-corner-radius: 0px;
+    --pressed-state-xlarge-corner-radius: 16px;
+    --pressed-state-xsmall-corner-radius: 4px;
+    --primary-button-background: var(--aqua);
+    --primary-button-background-on-color: hsl(45.56, 67.50%, 84.31%);
+    --primary-button-background-on-media: hsl(45.56, 67.50%, 84.31%);
+    --primary-button-icon: var(--on-surface);
+    --primary-button-icon-on-color: var(--surface);
+    --primary-button-icon-on-media: var(--surface);
+    --primary-button-text: var(--on-surface);
+    --primary-button-text-on-media: var(--surface);
+    --primary-deemphasized-button-background: hsla(59.52, 70.79%, 34.90%, .5);
+    --primary-deemphasized-button-icon: var(--on-surface-variant);
+    --primary-deemphasized-button-text: var(--on-surface-variant);
+    --primary-icon: var(--on-surface);
+    --primary-icon-on-media: var(--on-surface);
+    --primary-text: var(--on-surface);
+    --primary-text-on-color: var(--on-surface);
+    --primary-text-on-media: var(--on-surface);
+    --profile-photo-actor-corner-radius: 255px;
+    --profile-photo-non-actor-large-corner-radius: 12px;
+    --profile-photo-non-actor-medium-corner-radius: 8px;
+    --profile-photo-non-actor-small-corner-radius: 6px;
+    --profile-photo-non-actor-xlarge-corner-radius: 16px;
+    --profile-photo-non-actor-xsmall-corner-radius: 4px;
+    --progress-corner-radius: 255px;
+    --progress-ring-blue-background: hsla(182.69, 32.68%, 40.20%, .5);
+    --progress-ring-blue-foreground: var(--blue);
+    --progress-ring-disabled-background: rgba(111, 114, 118, .2);
+    --progress-ring-disabled-foreground: var(--surface-container-low);
+    --progress-ring-neutral-background: rgba(255, 255, 255, .2);
+    --progress-ring-neutral-foreground: var(--on-surface-variant);
+    --progress-ring-on-media-background: rgba(255, 255, 255, .2);
+    --progress-ring-on-media-foreground: var(--on-surface);
+    --radio-border-width: 2px;
+    --radio-checked-icon-size-large: 12px;
+    --radio-checked-icon-size-medium: 12px;
+    --radio-size-large: 24px;
+    --radio-size-medium: 20px;
+    --rating-star-active: var(--yellow-bright);
+    --rating-star-active-on-color: var(--on-surface);
+    --rating-star-active-on-media: var(--on-surface);
+    --reaction-anger: var(--red);
+    --reaction-haha: var(--yellow);
+    --reaction-like: var(--blue);
+    --reaction-love: var(--red-bright);
+    --reaction-sorry: var(--yellow);
+    --reaction-support: var(--yellow);
+    --reaction-wow: var(--yellow);
+    --reshare-radius: 16px;
+    --secondary-button-background: var(--surface-container);
+    --secondary-button-background-floating: var(--surface-container);
+    --secondary-button-background-on-color: var(--surface-container);
+    --secondary-button-background-on-dark: var(--surface-container-low);
+    --secondary-button-background-on-media: var(--surface-container-low);
+    --secondary-button-icon-on-media: var(--on-surface);
+    --secondary-button-pressed: var(--surface-container-lowest);
+    --secondary-button-stroke: rgba(0, 0, 0, 0);
+    --secondary-button-text: var(--on-surface);
+    --secondary-icon: var(--on-surface-variant);
+    --secondary-icon-on-color: var(--on-surface);
+    --secondary-icon-on-media: hvar(--on-surface);
+    --secondary-text: var(--on-surface-variant);
+    --secondary-text-on-color: var(--on-surface-variant);
+    --secondary-text-on-media: var(--on-surface-variant);
+    --selection-control-corner-radius: 4px;
+    --selection-control-large-corner-radius: 255px;
+    --selector-item-round: 255px;
+    --selector-item-square: 8px;
+    --sticky-footer-corner-radius: 0px;
+    --story-seen: var(--surface-container);
+    --story-unseen: var(--blue);
+    --sub-nav-action-corner-radius: 255px;
+    --surface-background: var(--surface);
+    --switch-unchecked-background-color: var(--surface-container);
+    --table-corner-radius: 0px;
+    --text-badge-corner-radius: 4px;
+    --text-badge-padding-horizontal: 6px;
+    --text-badge-padding-vertical: 6px;
+    --text-highlight: hsla(189.56, 88.98%, 24.90%, .6);
+    --text-input-active-text: var(--blue);
+    --text-input-bar-background: rgba(255, 255, 255, .1);
+    --text-input-caption-margin-top: 10px;
+    --text-input-multi-padding-between-text-scrollbar: 20px;
+    --text-input-multi-padding-scrollbar: 16px;
+    --text-input-padding-vertical: 12px;
+    --toast-addon-padding-horizontal: 6px;
+    --toast-addon-padding-vertical: 6px;
+    --toast-container-padding-horizontal: 10px;
+    --toast-container-padding-vertical: 16px;
+    --toast-corner-radius: 8px;
+    --toggle-active-background: var(--aqua);
+    --toggle-active-icon: ;
+    --toggle-active-text: var(--on-surface);
+    --tooltip-background: rgba(0, 0, 0, .8);
+    --tooltip-background-on-media: var(--surface-container-high);
+    --tooltip-corner-radius: 12px;
+    --verticalgrid-corner-radius: 0px;
+    --verticalgrid-inset-corner-radius: 16px;
+    --warning: var(--yellow);
+    --wash: var(--surface);
+    --web-wash: var(--surface);
+    --accent: var(--blue);
+    --filter-primary-icon: invert(75%) sepia(75%) hue-rotate(0deg);
+    --filter-always-white: invert(75%) sepia(75%) hue-rotate(0deg);
+    --switch-active: var(--aqua);
+    --secondary-icon-on-media: var(--on-surface);
+    --primary-deemphasized-button-background: var(--surface-container-high);
+    --focus-ring-blue: var(--blue);
+    --input-label-color-highlighted: var(--blue);
+    --blue-primary: var(--blue);
+    --dataviz-primary-3: var(--blue);
+    --cyan-primary: var(--blue);
+    --dataviz-blue-primary: var(--blue);
+    --text-badge-info-background: var(--blue);
+    --chat-outgoing-message-background-gradient: linear-gradient(var(--pink) calc(100vh - 455px + 48px), var(--blue) calc(100% - 56px), var(--blue)) !important;
+  }
 
-    #seo_filters span {
-        color: var(--blue-link) !important;
-    }
+  a[href="/marketplace/create/"] svg {
+    --x-color: var(--on-surface) !important;
+  }
 
-    div[aria-label="Account Controls and Settings"]>div:first-child svg {
-        --x-color: var(--green) !important;
-    }
+  div>div>div:has(h2) {
+    background-image: none !important;
+  }
 
-    div[aria-label="Account Controls and Settings"]>div:nth-child(2) svg {
-        --x-color: var(--blue) !important;
-    }
+  .x1xmf6yo:last-child span {
+    color: var(--primary-text) !important;
+  }
 
-    div[aria-label="Account Controls and Settings"]>div:nth-child(3)>span>span>div div:first-child svg {
-        --x-color: var(--yellow) !important;
-    }
+  .x1xmf6yo:last-child svg {
+    color: var(--primary-text) !important;
+  }
+
+  #seo_filters span {
+    color: var(--blue-link) !important;
+  }
+
+  div[aria-label="Account Controls and Settings"]>div:first-child svg {
+    --x-color: var(--green) !important;
+  }
+
+  div[aria-label="Account Controls and Settings"]>div:nth-child(2) svg {
+    --x-color: var(--blue) !important;
+  }
+
+  div[aria-label="Account Controls and Settings"]>div:nth-child(3)>span>span>div div:first-child svg {
+    --x-color: var(--yellow) !important;
+  }
 }
