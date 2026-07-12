@@ -1,12 +1,13 @@
 /* ==UserStyle==
 @name           youtube-gruvbox
 @namespace      github.com/venittas
-@version        1.0.6
+@version        1.0.7
 @description    A gruvbox theme for youtube
 @author         venittas
 
 @preprocessor stylus
 @var checkbox sharpCorners "Sharp Corners" 0
+@var checkbox coloredComments "Colored Comments" 0
 ==/UserStyle== */
 @-moz-document domain("youtube.com") {
   if sharpCorners {
@@ -28,6 +29,20 @@
 
     ytd-notification-topbar-button-renderer {
       border-radius: 0px !important;
+    }
+  }
+
+  if coloredComments {
+    ytd-author-comment-badge-renderer {
+      --ytd-author-comment-badge-name-color: var(--yellow) !important;
+    }
+
+    #author-comment-badge svg {
+      fill: var(--pink) !important;
+    }
+
+    #header-author #author-text {
+      color: var(--yellow) !important;
     }
   }
 
@@ -75,10 +90,27 @@
 
   [dark] {
     --tffc2fd3a644f6275: var(--on-surface) !important;
+    --t7f9b7e1603e20b94: var(--on-surface) !important;
+    --tfa3475c508f5dfef: var(--tf3fc855af2285f5f) !important;
+    --t3e41d7b17b187f69: var(--surface) !important;
   }
 
   [color-version="v2_0"] [dark] {
     --yt-sys-color-baseline--text-primary: var(--on-surface) !important;
+  }
+
+  #frosted-glass,
+  #masthead #background {
+    background-color: rgba(40, 40, 40, .8) !important;
+    /* Surface color turned to RGB */
+  }
+
+  .yt-icon-shape svg g:first-child path:first-child {
+    fill: var(--red);
+  }
+
+  #country-code {
+    color: var(--yellow) !important;
   }
 
   .ytSearchboxComponentInputBoxDark {
@@ -425,6 +457,10 @@
     backdrop-filter: none;
   }
 
+  #movie_player .ytp-bezel[role="status"] svg path {
+    fill: var(--on-surface);
+  }
+
   .ytBadgeShapeThumbnailLive {
     color: var(--on-surface);
     background-color: var(--red);
@@ -471,5 +507,18 @@
   #buttons[class*="ytd-commentbox"] #submit-button button {
     color: var(--on-surface);
     background-color: var(--aqua);
+  }
+
+  #description button[aria-label*="Show transcript"] {
+    color: var(--on-surface);
+  }
+
+  .ytp-spinner-circle {
+    border-radius: 50% !important;
+    border-color: var(--on-surface-variant) var(--on-surface-variant) transparent;
+  }
+
+  .ytp-spinner-message {
+    background: var(--surface);
   }
 }
